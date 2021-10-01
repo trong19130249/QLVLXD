@@ -2,15 +2,40 @@ package model;
 
 
 public class Customer {
-	private String name;
+	private String userName;
+	private String password;
 	private String email;
+	private String name;
+	private String sex;
 	private String phoneNumber;
 	private String address;
-	public Customer(String name, String email, String phoneNumber, String address) {
-		this.name = name;
+	public Customer(String userName, String password, String email, String name, String sex, String phoneNumber,
+			String address) {
+		this.userName = userName;
+		this.password = password;
 		this.email = email;
+		this.name = name;
+		this.sex = sex;
 		this.phoneNumber = phoneNumber;
 		this.address = address;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getName() {
 		return name;
@@ -18,11 +43,11 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
-		return email;
+	public String getSex() {
+		return sex;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -38,10 +63,12 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + ", email=" + email + ", phoneNumber=" + phoneNumber + ", address=" + address
-				+ "]";
+		return "Customer [userName=" + userName + ", password=" + password + ", email=" + email + ", name=" + name
+				+ ", sex=" + sex + ", phoneNumber=" + phoneNumber + ", address=" + address + "]";
 	}
-	
-	
+	public String toWrite() {
+		return userName +"#" +password+"#"+email+"#"+name+"#"+sex+"#"+phoneNumber+"#"+address;
+		
+	}
 	
 }

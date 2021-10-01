@@ -57,12 +57,12 @@ public class Bill implements IBill{
 		Material i2 = new Material("sp2", 100000, "xi mang", "ct1", "/");
 		ItemBill ib = new ItemBill(i1,20);
 		ItemBill ib2 = new ItemBill(i2,12);
-		Bill b = new Bill(new Customer("q", "e", "t", "a"));
-		b.addItemBill(ib);
-		b.addItemBill(ib2);
-		System.out.println(b.calcBill());
-
-		System.out.println(b.calcBeforeDiscount());
+//		Bill b = new Bill(new Customer("q", "e", "t", "a"));
+//		b.addItemBill(ib);
+//		b.addItemBill(ib2);
+//		System.out.println(b.calcBill());
+//
+//		System.out.println(b.calcBeforeDiscount());
 	}
 	@Override
 	public void addItemBill(ItemBill item) {
